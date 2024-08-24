@@ -14,7 +14,7 @@ namespace SpawnProtectPlus
     {
         public void OnHurting(HurtingEventArgs ev)
         {
-            foreach (StatusEffectBase statusEffectBase in ev.Player.ActiveEffects.ToList<StatusEffectBase>())//Traversal player's ActiveEffects.遍历玩家的已激活效果
+            foreach (StatusEffectBase statusEffectBase in ev.Player.ActiveEffects)//Traversal player's ActiveEffects.遍历玩家的已激活效果
             {
                 if (statusEffectBase.GetEffectType() == EffectType.SpawnProtected)//If player is SpawnProtected.如果玩家有出生保护
                 {
